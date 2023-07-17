@@ -2,6 +2,12 @@ const common = require("@dh253/nds");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(common, {
-    domain: "fixme",
+    domain: "https://dustinheisey.com",
   });
+
+  return {
+    dir: {
+      layouts: "_layouts",
+    },
+  };
 };

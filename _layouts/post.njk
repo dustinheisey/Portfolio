@@ -1,0 +1,78 @@
+---
+layout: base
+type: article
+---
+
+{% from "../node_modules/@dh253/nds/macros/layout.njk" import layout %}
+
+{% block article %}
+
+{% if site.posts.start %}
+  {% for key, region in site.posts.start %}
+        {% if region.local === true %}
+            {% set src = "layouts/" + region.layout + ".njk" %}
+            {% set props = region %}
+            {% set navigation = site.navigation %}
+            {% include src %}
+        {% else %}
+            {{ layout(region, site.navigation) }}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+<article class="region inset prose prose-l">
+  <header class="stack gap-xs">
+    {# Breadcrumb #}
+    <h1 class="page-headline">{{ title }}</h1>
+    {% set wc = content | striptags | wordcount %} {% set wPerMinute = (wc /
+    240) + 1 %}
+    <ul class="cluster gap-xs no-marker">
+      <li class="not-prose color-primary">{{ page.date | readableDate }}</li>
+      <li class="not-prose color-primary">
+        {{ wPerMinute | round }} min read.
+      </li>
+    </ul>
+  </header>
+
+  <hr class="outline" />
+  {{ content | safe }}
+</article>
+
+{% if site.posts.end %}
+  {% for key, region in site.posts.end %}
+        {% if region.local === true %}
+            {% set src = "layouts/" + region.layout + ".njk" %}
+            {% set props = region %}
+            {% set navigation = site.navigation %}
+            {% include src %}
+        {% else %}
+            {{ layout(region, site.navigation) }}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ title }}",
+    "image": [],
+    "author": "{{ metadata.author.name }}",
+    "genre": "{{ metadata.genre }}",
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ metadata.publisher.name }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ 'favicon/manifest-icon-192.maskable.png' }}"
+      }
+    },
+    "url": "{{ metadata.url }}{{ canonicalUrl or page.url }}",
+    "mainEntityOfPage": "{{ metadata.url }}{{ canonicalUrl or page.url }}",
+    "datePublished": "{{ page.date | htmlDateString }}",
+    "dateModified": "{{ page.inputPath | lastModifiedDate  | htmlDateString }}",
+    "description": "{{ content | striptags | truncate(140) }}"
+  }
+</script>
+
+{% endblock %}

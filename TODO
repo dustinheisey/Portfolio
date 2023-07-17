@@ -1,7 +1,7 @@
 
 Todo:
-  ☐ Setup PWA Config
-    ☐ Setup PWA Manifest
-    ☐ Generate Favicons
-  ☐ Optimize Assets
-    ☐ Optimize SVG
+  ✔ Setup PWA Config @done(17/07/23 14:35)
+    ✔ Setup PWA Manifest @done(17/07/23 14:35)
+    ✔ Generate Favicons @done(17/07/23 14:35)
+  ✔ Optimize Assets @done(17/07/23 14:35)
+    ✔ Optimize SVG @done(17/07/23 14:35)

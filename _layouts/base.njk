@@ -1,28 +1,16 @@
----
-pagination:
-    data: site.pages
-    size: 1
-    alias: config
-    addAllPagesToCollections: true
-eleventyComputed:
-    title: {{ config.title }}
-    description: {{ config.description }}
-permalink: "{{ config.url }}.html"
----
-
-{% from "./node_modules/@dh253/nds/macros/layout.njk" import layout, header, footer %}
+{% from "../node_modules/@dh253/nds/macros/layout.njk" import header, footer %}
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
-    <title>{{config.title}}</title>
-    <meta name="description" content="{{config.description}}" />
+    <title>{{title}}</title>
+    <meta name="description" content="{{description}}" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
-    <meta property="og:title" content="{{config.title}}" />
-    <meta property="og:description" content="{{config.description}}" />
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:description" content="{{description}}" />
     {% if type == "article" %}
     <meta property="og:type" content="article" />
     {% else %}
@@ -69,8 +57,8 @@ permalink: "{{ config.url }}.html"
     <link rel="apple-touch-startup-image" href="favicon/apple-splash-640-1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
     <link rel="apple-touch-startup-image" href="favicon/apple-splash-1136-640.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
     
-    <meta name="theme-color" content="fixme --color-primary-light" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="fixme --color-primary-dark" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#566500" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#bdd062" media="(prefers-color-scheme: dark)">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
@@ -79,6 +67,7 @@ permalink: "{{ config.url }}.html"
 
     <script src="/index.min.js"></script>
     <script src="/overrides.js"></script>
+    <script src="https://cdn.usefathom.com/script.js" data-site="VCCTYWMM" defer></script>
     <script>
     if ('serviceWorker' in navigator)
         navigator.serviceWorker.register('/sw.js')
@@ -88,21 +77,9 @@ permalink: "{{ config.url }}.html"
 <body class="theme-background">
     {% commonicons %}
     {% siteicons %}
+    {{ header({ config: site.navigation, type: type }) }}
 
-    {% if config.header != false %}
-        {{ header({ config: site.navigation }) }}
-    {% endif %}
-
-    {% for key, region in config.regions %}
-        {% if region.local === true %}
-            {% set src = "layouts/" + region.layout + ".njk" %}
-            {% set props = region %}
-            {% set navigation = site.navigation %}
-            {% include src %}
-        {% else %}
-            {{ layout(region, site.navigation) }}
-        {% endif %}
-    {% endfor %}
+    <main>{{ content | safe }}</main>
 
     {{ footer({ config: site.navigation, class: 'gap' }) }}
 </body>

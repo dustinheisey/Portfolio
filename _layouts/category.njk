@@ -1,0 +1,33 @@
+---
+layout: base
+---
+
+{% from "../node_modules/@dh253/nds/macros/layout.njk" import layout %}
+
+{% if site.categories.start %}
+  {% for key, region in site.categories.start %}
+        {% if region.local === true %}
+            {% set src = "layouts/" + region.layout + ".njk" %}
+            {% set props = region %}
+            {% set navigation = site.navigation %}
+            {% include src %}
+        {% else %}
+            {{ layout(region, site.navigation) }}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+{{ layout({layout: 'blog', variant: 'masonry', headline: label + " Posts", back: true}, site.navigation, {categories: collections.category, posts: collections[label]}) }}
+
+{% if site.categories.end %}
+  {% for key, region in site.categories.end %}
+        {% if region.local === true %}
+            {% set src = "layouts/" + region.layout + ".njk" %}
+            {% set props = region %}
+            {% set navigation = site.navigation %}
+            {% include src %}
+        {% else %}
+            {{ layout(region, site.navigation) }}
+        {% endif %}
+    {% endfor %}
+{% endif %}
