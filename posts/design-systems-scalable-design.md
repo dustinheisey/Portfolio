@@ -1,8 +1,11 @@
 ---
 title: "Design Systems: The Blueprint for Scalable Web Design"
-description: Discover what makes a design system scalable, its role in web design, and how it enhances UI designs.
-tags: Design Systems
-url: "design-systems-scalable-design"
+description: Discover what makes a design system scalable, its role in web
+  design, and how it enhances UI designs.
+url: design-systems-scalable-design
+date: 2023-06-02T19:43:37.598Z
+tags:
+  - Design Systems
 ---
 
 In today's rapidly evolving digital world, it's crucial to have web designs that are effective, easier to scale, and adaptable. This brings us to the realm of design systems – a well-planned and creative strategy, often likened to the DNA of digital products. But what is a design system in web design? How does it enhance scalability in User Interface (UI) designs, and what are the advantages it provides? This article aims to unpack these questions, offering an in-depth understanding of design systems and their vital role in crafting scalable web design.

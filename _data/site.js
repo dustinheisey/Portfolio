@@ -1094,10 +1094,14 @@ const config = {
       regions: {
         error: {
           layout: "center",
-          overline: "404",
-          headline: "Page not found",
-          body: "Sorry, the page you're looking for can't be found.",
-          btn: { label: "Go Home", url: "/" },
+          content: {
+            component: "text",
+            size: "page",
+            overline: "404",
+            headline: "Page not found",
+            body: "Sorry, the page you're looking for can't be found.",
+            btn: { label: "Go Home", url: "/" },
+          },
         },
       },
     },

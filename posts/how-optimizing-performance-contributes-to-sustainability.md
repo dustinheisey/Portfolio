@@ -1,8 +1,12 @@
 ---
-title: "How Optimizing Web Performance Can Contribute to Sustainability"
-description: Understand why sustainable web design is vital, find practical strategies to make your website more sustainable, and learn how to optimize your website performance for a lower carbon footprint.
-tags: Sustainability
-url: "how-optimizing-performance-contributes-to-sustainability"
+title: How Optimizing Web Performance Can Contribute to Sustainability
+description: Understand why sustainable web design is vital, find practical
+  strategies to make your website more sustainable, and learn how to optimize
+  your website performance for a lower carbon footprint.
+url: how-optimizing-performance-contributes-to-sustainability
+date: 2023-05-31T19:43:07.801Z
+tags:
+  - Sustainability
 ---
 
 The internet is a powerful tool that connects billions of devices worldwide, enabling us to share information and carry out complex tasks effortlessly. This convenience comes with a significant environmental price. The servers that power the internet contribute notably to global carbon emissions, equal to the impact of the airline industry. As conscientious internet users and developers, it's important we consider the sustainability of our online activities. One way to do this is by optimizing web performance with a focus on sustainability.

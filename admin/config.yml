@@ -1,19 +1,36 @@
+logo_url: https://dustinheisey.com/favicon.svg
 backend:
-  name: git-gateway
+  name: github
+  repo: dustinheisey/portfolio
   branch: main
-media_folder: "public/img/uploads"
-public_folder: "_site/img/uploads"
+media_folder: "/public/img/uploads"
+public_folder: "/img/uploads"
+
+# Please run "npx netlify-cms-proxy-server" for local backend
+local_backend: true
 collections:
-  - name: "blog"
-    label: "Blog"
+  - label: "Blog"
+    name: "blog"
     folder: "posts"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Tags", name: "tags", widget: "string" }
       - { label: "URL", name: "url", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - widget: select
+        label: "tags"
+        name: "tags"
+        multiple: true
+        create: true
+        options:
+          [
+            "Accessibility",
+            "Design Systems",
+            "Marketing",
+            "Sustainability",
+            "Responsiveness",
+          ]
       - { label: "Body", name: "body", widget: "markdown" }

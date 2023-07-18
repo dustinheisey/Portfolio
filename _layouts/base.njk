@@ -17,10 +17,13 @@
     <meta property="og:type" content="website" />
     {% endif %}
     <meta property="og:url" content="{{page.url}}" />
-    <meta property="og:image" content="{{ogImage}}" />
-    {% if image %}
-    <meta property="og:image" content="{{ image | absoluteUrl(site.url) }}" />
+    {% if type == "article" %}
+    <meta property="og:image" content="{{ site.url }}/img/og/{{ date | postDate }}-{{ title | slug }}.jpeg" />
     {% endif %}
+
+    {# <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@dustinheisey" />
+    <meta name="twitter:creator" content="@dustinheisey" /> #}
 
     <link rel="canonical" href="{{ site.url }}{{ canonicalUrl or page.url }}" />
 

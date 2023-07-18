@@ -1,8 +1,11 @@
 ---
-title: "Web Accessibility for Purpose Driven Organizations"
-description: Discover how accessibility can expand audience reach, improve SEO, enhance brand perception, and reduce legal risk.
-tags: Accessibility
-url: "web-accessibility"
+title: Web Accessibility for Purpose Driven Organizations
+description: Discover how accessibility can expand audience reach, improve SEO,
+  enhance brand perception, and reduce legal risk.
+tags:
+  - Accessibility
+url: web-accessibility
+date: 2023-05-29T19:37:17.315Z
 ---
 
 In our modern digital age, a website is much more than a digital front for businesses. It's a vital instrument for communication, establishing relationships, and conducting business operations. One key aspect that determines a website's effectiveness is its accessibility. But what does web accessibility imply in the business context, and why is it so important?

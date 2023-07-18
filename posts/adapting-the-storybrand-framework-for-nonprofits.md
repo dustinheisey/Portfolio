@@ -1,8 +1,13 @@
 ---
-title: 'Adapting the StoryBrand Framework for Nonprofit Marketing Websites: A Comprehensive Guide'
-description: 'Discover how to adapt the StoryBrand Framework for nonprofit marketing websites. This guide provides a detailed walkthrough of the framework, focusing on the unique needs and dual audiences of nonprofits: the mission and the donors.'
-tags: Marketing
-url: "adapting-the-storybrand-framework-for-nonprofits"
+title: "Adapting the StoryBrand Framework for Nonprofit Marketing Websites"
+description: "Discover how to adapt the StoryBrand Framework for nonprofit
+  marketing websites. This guide provides a detailed walkthrough of the
+  framework, focusing on the unique needs and dual audiences of nonprofits: the
+  mission and the donors."
+url: adapting-the-storybrand-framework-for-nonprofits
+date: 2023-06-07T19:43:48.508Z
+tags:
+  - Marketing
 ---
 
 # Adapting the StoryBrand Framework for Nonprofit Marketing Websites: A Comprehensive Guide

@@ -1,8 +1,14 @@
 ---
-title: "Harnessing the Power of the StoryBrand Framework: An In-Depth Guide for Businesses and Nonprofits"
-description: Unlock the power of storytelling in your marketing with this in-depth guide on the StoryBrand Framework by Donald Miller. Learn how this unique methodology can transform your brand messaging, drive action, and lead to success. Learn practical tips and insights on how to effectively implement the StoryBrand Framework.
-tags: Marketing
-url: "harnessing-the-power-of-the-storybrand-framework"
+title: "Harnessing the Power of the StoryBrand Framework"
+description: Unlock the power of storytelling in your marketing with this
+  in-depth guide on the StoryBrand Framework by Donald Miller. Learn how this
+  unique methodology can transform your brand messaging, drive action, and lead
+  to success. Learn practical tips and insights on how to effectively implement
+  the StoryBrand Framework.
+url: harnessing-the-power-of-the-storybrand-framework
+date: 2023-06-07T19:43:22.802Z
+tags:
+  - Marketing
 ---
 
 Harnessing the Power of the StoryBrand Framework: An In-Depth Guide for Businesses and Nonprofits
