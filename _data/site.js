@@ -927,54 +927,11 @@ const config = {
           },
         },
         grid: {
-          layout: "gallery",
+          layout: "portfolio",
+          variant: "masonry",
           col: 2,
           headline: "Recent Projects",
-          body: "Find a curated selection of real-world projects I've completed for nonprofits and companies.",
-          items: [
-            {
-              component: "blurb",
-              headline: "Fostering Buzz for Bee Conservation",
-              url: "https://beeleaf.dustinheisey.com/",
-              body: "I crafted an engaging, and influential marketing website for an imagined bee conservation nonprofit, the BeeLeaf Foundation, to showcase my web design and marketing skills. By including vibrant imagery, persuasive narratives, and fluid user interfaces, this website conveys the urgency and importance of bee conservation and educates about the symbiotic relationship between bees and the ecosystems they tirelessly support",
-              img: {
-                src: "bee-leaf-desktop-mockup.jpg",
-                alt: "BeeLeaf Marketing Website",
-              },
-            },
-            {
-              component: "blurb",
-              headline: "Empowering Ocean Conservation Efforts",
-              url: "https://oceansvoice.dustinheisey.com/",
-              body: "I crafted an immersive and impactful marketing website for a fictional ocean conservation nonprofit as a portfolio piece to showcase my web design and marketing skills. Through integration of captivating visuals, compelling narratives, and streamlined user experiences, the website fosters a deep emotional connection between visitors and the plight of our oceans.",
-              img: {
-                src: "oceans-voice-desktop-mockup.jpg",
-                alt: "Ocean's Voice Marketing Website",
-              },
-            },
-            {
-              component: "blurb",
-              headline:
-                "Encouraging User-Friendly and Accessible Science Education",
-              url: "https://www.vernier.com/product-category/?category=software",
-              body: "At Vernier Science Education, I designed and developed dozens of user-friendly and accessible features for their data collections/visualization apps, including Video Analysis, Graphical Analysis, Instrumental Analysis, and Spectral Analysis. By creating an accessible design system and AA contrast compliant color palette, I created consistency between and within each app.",
-              img: {
-                src: "graphical-analysis-desktop-mockup.jpg",
-                alt: "Vernier Science Education Graphical Analysis App",
-              },
-            },
-            {
-              component: "blurb",
-              headline:
-                "Designing and Developing a Website to Mobilize Thousands",
-              url: "https://climatestrikeoregon.org/",
-              body: "To assist the climate strikes that occurred in 2019, I designed and developed a website to help inspire 15,000 attendees to strikes happening all across Oregon. By creating a visually appealing and easy-to-use website, I was able to mobilize thousands of people and make a real impact in the fight against climate change.",
-              img: {
-                src: "climate-strike-oregon-desktop-mockup.jpg",
-                alt: "Climate Strike Oregon Website",
-              },
-            },
-          ],
+          body: "Find a curated selection of real-world projects I've completed for nonprofits and companies as well as some examples I created to demonstrate my design & development skills.",
         },
         action: {
           layout: "bg-pattern",

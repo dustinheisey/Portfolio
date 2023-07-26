@@ -1,0 +1,43 @@
+---
+layout: base
+---
+
+{% from "../node_modules/@dh253/nds/macros/layout.njk" import layout %}
+
+<article>
+  <header class="region sidebar reverse sidebar-split gap-m {{props.class}} {% if props.align %}align-{{props.align}}{% endif %}">
+      {% set src = './public/img/' + img %}
+      {% img src, alt %}
+      <section class="prose auto stack gap-xs justify-center fixed grow-1">
+          <h1 class="page-headline">
+              {{title}}
+          </h1>
+          <p>{{intro}} <a class="link link-navigation" target="_blank" href="{{url}}">Visit the full website</a></p>
+      </section>
+  </header>
+  <div class="region prose prose-l">{{ content | safe }}</div>
+</article>
+
+{% if site.posts.end %}
+  {% for key, region in site.posts.end %}
+        {% if region.local === true %}
+            {% set src = "layouts/" + region.layout + ".njk" %}
+            {% set props = region %}
+            {% set navigation = site.navigation %}
+            {% include src %}
+        {% else %}
+            {{ layout(region, site.navigation) }}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+{% if gallery %}
+    <div class="region stack inset-0 gap">
+        <div class="masonry col-2">
+            {% for item in gallery %}
+                {% set src = './public/img/' + item + ".png" %}
+                {% img src, src %}
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}

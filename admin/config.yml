@@ -33,3 +33,20 @@ collections:
             "Responsiveness",
           ]
       - { label: "Body", name: "body", widget: "markdown" }
+  - label: "Portfolio"
+    name: "portfolio"
+    folder: "case-studies"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Intro Img Src", name: "img", widget: "string" }
+      - { label: "Intro Img Alt", name: "alt", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "string" }
+      - { label: "Intro", name: "intro", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "URL", name: "url", widget: "string" }
+      - { label: "Gallery", name: "gallery", widget: "list" }
+      - { label: "Body", name: "body", widget: "markdown" }

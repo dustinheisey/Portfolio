@@ -101,7 +101,7 @@ permalink: "{{ config.url }}.html"
             {% set navigation = site.navigation %}
             {% include src %}
         {% else %}
-            {{ layout(region, site.navigation, {categories: collections.category, posts: collections.post}) }}
+            {{ layout(region, site.navigation, {categories: collections.category, posts: collections.post, portfolio: collections['case-study']}) }}
         {% endif %}
     {% endfor %}
 
