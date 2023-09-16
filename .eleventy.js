@@ -1,4 +1,6 @@
 const common = require("@dh253/nds");
+const fs = require("fs");
+const Image = require("@11ty/eleventy-img");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(common, {
